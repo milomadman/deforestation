@@ -1,0 +1,385 @@
+body {
+  background: rgba(236, 205, 167, 0.1);
+  width: 100%
+}
+
+#text{
+  line-height: 1.5;
+  text-align: justify;
+  margin-right: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Lato", cursive;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center; 
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  color: rgb(41, 31, 0);
+  margin-top: 5%;
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+  text-align: center; 
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  color: rgb(83, 58, 25);
+}
+
+h3 {
+  font-family: "Lato", sans-serif;
+  text-align: left; 
+  display: flex; 
+  align-items: left;
+  justify-content: left; 
+  color: rgb(83, 58, 25);
+  margin-top: 40px;  
+}
+
+.effects {
+  font-family: "Lato", sans-serif;
+  text-align: center; 
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  color: rgb(83, 58, 25);
+  margin-top: 40px;  
+}
+
+.actif {
+  background-color:rgb(141, 116, 82);
+  color: #e7e5e5;
+  border-spacing: 20px;
+  width: 70%;
+  border: center;
+  margin-left:15%;
+  padding-top:10px;
+  border-radius: 5px;
+}
+
+h4{
+  margin-bottom:1px;
+  margin-top:20px;
+}
+
+
+#allsources {
+  margin-left:20px;
+}
+
+.navbar {
+  position: relative;
+  z-index: 1; /*placer au-dessus des autres éléments de la page*/
+  border: 1px solid #ffffff;
+  background-color: rgb(141, 116, 82);
+  display: flex; /*facilite la mise en page*/
+  justify-content: flex-start; /*le contenu sur le côté gauche*/
+  align-items: center;
+  padding: 5px; /*marge intérieure*/
+  height: 50px; /*la hauteur de l'élément*/
+  position: fixed; top: 0; left: 0; 
+}
+
+.navbar a {
+  float: left; /*flotter sur le côté gauche*/
+  display: block; /*affiché en tant que bloc*/
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  cursor: default;
+}
+
+.menu_not_divise,
+#about {
+  font-family: sans-serif;
+  overflow: block;/*le contenu doit être 
+  visible et ne doit pas dépasser de son conteneur.*/
+  padding: 8px 8px;      
+  color: white;
+  border-radius: 20px;
+  background-color: rgb(141, 116, 82);
+  font-size: 13px; 
+  float: right; /*l'élément doit être placé sur le côté droit*/
+}
+
+#homie {
+  padding: 8px 0px;
+}
+
+.menu_not_divise {
+  color: #ffffff;
+  position: relative; /*la position de l'élément*/
+  background-color: rgb(141, 116, 82);
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  padding-right: auto;     
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: flex-start; /*contrôler la position*/
+  align-items: center;
+  cursor:pointer;
+}
+
+.menu_not_divise:hover {
+  float: left;
+  display: block; /*l'élément doit être affiché en tant que bloc*/
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu_not_divise.active {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#about {
+  color: #ffffff;
+  position: relative;
+  left: 0;
+  background-color: rgb(141, 116, 82);
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  float: left;
+  clear: both;
+  cursor:pointer;
+}
+
+#about:hover {
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#about.active {
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block; /*en bloc en conservant sa hauteur et sa largeur*/
+  cursor:pointer;
+}
+
+#butt_vis{
+  overflow: hidden;
+  padding: 8px 8px;
+  color: rgb(255, 255, 255); 
+  border-radius:5px;
+  background-color: rgb(141, 116, 82);
+  font-size: 13px;
+}
+
+#butt_vis {
+  color: #ffffff;
+  position: relative;
+  background-color: rgb(141, 116, 82);
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  padding-right: auto;
+  margin-right: auto;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#butt_vis:hover{
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 8px;
+  text-decoration: none;
+}
+
+#butt_vis.active {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 8px;
+  text-decoration: none;
+}
+
+.dropdown-button {
+  position: relative;
+  z-index: 2;    /*l'élément a une position supérieure à celle des autres éléments*/
+  padding: 8px 16px;
+  border: none;
+  width:100%;
+  background-color: #977d65;
+  cursor: pointer;  /*le curseur prendra la forme d'une main*/
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  border-radius: 5px;
+  min-width: 130px;
+  background-color: #977d65;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  top: 45px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 10px;
+  text-decoration: none;
+  text-align:left;
+  color: black;
+  width:130px;
+  font-family: sans-serif;
+  font-size: 11pt;
+}
+
+
+.dropdown-content a:hover {
+  background-color: #f7dcc8;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown + .dropdown {
+  margin-left: 10px;
+}
+
+
+.icon-container {
+  display: inline-block;
+  text-align: center;
+  margin: 10px 40px;
+}
+
+.icons-container {
+  text-align: center;
+}
+
+#causes-info p {
+  padding-bottom:10px;
+  max-width: 80%;
+  text-align: justify;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
+#consequences-info p{
+  padding-bottom: 10px;
+  max-width: 80%;
+  text-align: justify;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
+#help-info p{
+  padding-bottom:10px;
+  max-width: 80%;
+  text-align: justify;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}    
+
+ul {
+position: fixed;
+top: 0;
+width: 100%;
+list-style-type: none;
+margin: 0;
+padding: 0;
+margin-bottom: 5px;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin: 10px 40px;
+}
+
+.icon-name {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+.icon-container a {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.icon-container.clicked a {
+  opacity: 0.5; /* Rendre l'icône cliquée opaque */
+  transform: scale(1.1);
+}
+
+.icon-container a:hover {
+  opacity: 0.5;
+}
+
+
+.infoparagraphs {
+  padding-bottom: 10px;
+}
+
+
+#titlejeu{
+  margin-bottom: 0px;
+  margin-top: 80px;
+}
+
+#titleinfo{
+  margin-top: 0px;
+}
+
+#img_poster {
+  position: relative;
+  left: -7px;  
+  margin-top: 50px;
+}

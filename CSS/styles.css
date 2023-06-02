@@ -1,0 +1,24 @@
+div#map {
+  display: inline-block;
+  overflow: auto;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  font-family: "Lato", sans-serif; 
+  font-size: 12px;
+  background: lightsteelblue;
+  border: 5px;
+  border-radius: 8px;
+  pointer-events: none;
+  text-size-adjust: auto;
+}
+

@@ -1,0 +1,184 @@
+div#map {
+  display: inline-block;
+  overflow: auto;
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 5px;
+  border-radius: 8px;
+  pointer-events: none;
+  text-size-adjust: auto;
+}
+
+#tooltip {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  opacity: 0
+}
+
+#tooltip p {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+body {
+  background-color: steelblue;
+}
+
+button {
+  margin-right: 5px; /* espacement horizontal entre les boutons */
+  font-size: 10pt;
+  padding: 2px 5px;
+  display: "inline-block";
+}  
+
+#boutons button:hover {
+  border: 2px solid black; /* épaisseur de la bordure et couleur */
+}
+
+.column {
+  float: left;
+  width: 55%;
+  height:100%;
+  padding: 0px;
+}
+
+#graph {
+  width:40%;
+  margin-left:2px;
+  height:450px;
+}
+
+.topofgraph {
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left:70px;
+}
+
+#titlegraph { 
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left:70px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  height:100%;
+}
+
+#title {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+.slidecontainer {
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.slider {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.legend {
+  position: absolute;
+  top: 325px;
+  left: 20px;
+  width: 130px;
+  height: 130px;
+}
+
+.color-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.color {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+#top {
+  background-color: #00ff11;
+}
+
+#middle {
+  background-color: #006b05;
+}
+
+#bottom {
+  background-color: #000000;
+}
+
+.gray {
+  background-color: #9e9e9e;
+}
+
+#hectare {
+  position: absolute;
+  top: 55%;
+  left: 51%;
+  transform: rotate(270deg);
+}
+
+#datasource {
+  padding-top:38%;
+  padding-right:20px;
+  font-size: 9pt;
+  color: grey;
+  text-align: right;
+}
+
+#scrollButton {
+  position: fixed;
+  top: 94%;
+  left: 10%;
+}
+
+#stopButton {
+  position: fixed;
+  top: 94%;
+  left: 15%;
+}
+
