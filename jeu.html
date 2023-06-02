@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Memory Game</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta name="robots" content="index, follow, noarchive, noodp, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="description" content="memory-game" />
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="stylesheet" type="text/css" media="all" href="CSS/app.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="CSS/memory-game.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="CSS/modal.css" />
+    <link rel="stylesheet" href="CSS/index.css"/>
+    <script src="JS/index.js" charset="utf-8"></script>
+	<script src="JS/about.js" charset="utf-8"></script>
+</head>
+<body>
+    <header class="header">
+        <ul class="navbar" style="height:60px">
+          <li><a id="homie" href="index.html"><button class="menu_not_divise">A propos</button></a></li>
+          <li><a id="mapngraph" href="statistique.html"><button class="menu_not_divise">Statistique</button></a></li>
+          <li>
+              <div class="dropdown">
+                  <button id="butt_vis" class="dropdown">Animaux</button>
+                  <div class="dropdown-content">
+                    <a href="infos-ani.html" id="info" style="width:150px">Information</a>
+					<a href="jeu.html" id="jeu" style="width:150px">Jeux de mémoire</a>
+                  </div>
+              </div>
+          </li>
+          <li><a href="source.html"><button class="menu_not_divise">Sources</button></a></li>
+          <li><a href="about.html" float: left id="about" type="bouton">About</a></li>
+        </ul>
+    </header> 
+    <h1 id="titlejeu">Jeux Mémoire</h1>
+
+    <div class="page page-memory-game">
+        <div class="memory-game" id="memoryGame">
+            <div class="memory-board"></div>
+            <div class="memory-slider no-match slideUp" id="noMatch">No Match</div>
+            <div class="modal modal-fadeIn" id="modal-match">
+                <header class="modal-header"> 
+                    <span onclick="document.getElementById('picofanimal').innerHTML=''; 
+                                   document.getElementById('modal-match').style.display='none'"
+                        class="modal-close-button display-topright hover-red">&times;</span>
+                    <h2 id="modalhead">You found an endangered animal</h2>
+                </header>
+                <div class="modal-body">
+                    <div id="picofanimal"></div>
+                    <h2 id="animalname"></h2>
+                    <table>
+                        <tr>
+                            <th style="width:200px">Classe:</th>
+                            <td id="animalclass">></td>
+                        </tr>
+                        <tr>
+                            <th>Age:</th>
+                            <td id="animalage">></td>
+                        </tr>
+                        <tr>
+                            <th>Liste rouge:</th>
+                            <td id="animalliste">></td>
+                        </tr>
+                        <tr>
+                            <th>Tendance Démographique:</th>
+                            <td id="animaldemog">></td>
+                        </tr>
+                        <tr>
+                            <th>Nombre d'individus matures:</th>
+                            <td id="animalnombr">></td>
+                        </tr>
+                        <tr>
+                            <th>Répartition géographique:</th>
+                            <td id="animalgeo">></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="memory-ui">
+                <span class="memory-moves">Moves: <span id="memoryMoves">0</span></span>
+                <button class="playBtn">Start Over</button>
+                <span class="memory-matches">Matches: <span id="memoryMatches">0</span> <span class="memory-matches-cards" id="memoryMatchesCards"></span></span>
+            </div>
+            
+            <p id="gamesource">This game is based on: <a href="https://tommykrueger.com/memory-game">TommyKrueger</a></p>
+        </div>
+        <script src="JS/memory-game.js"></script>
+        <script type="module">
+            import MemoryCards from './JS/memory-cards.js';
+            let memoryGame = new MemoryGame({
+                selector: document.getElementById('memoryGame'),
+                cards: MemoryCards.getCards()
+            });
+        </script>
+    </div>
+</body>
+</html>

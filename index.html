@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Déforestation </title>
+	<link rel="stylesheet" href="CSS/index.css"/>
+    <script src="JS/index.js" charset="utf-8"></script>
+	<script src="JS/about.js" charset="utf-8"></script>
+	<script src="JS/video.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="CSS/video.css"/>
+  </head>
+  <body>
+	<header class="header">
+	  <ul class="navbar">
+		<li><a id="homie" href="index.html"><button class="menu_not_divise">A propos</button></a></li>
+		<li><a id="mapngraph" href="statistique.html"><button class="menu_not_divise">Statistique</button></a></li>
+		<li>
+			<div class="dropdown">
+				<button id="butt_vis" class="dropdown">Animaux</button>
+				<div class="dropdown-content">
+					<a href="infos-ani.html" id="info">Information</a>
+					<a href="jeu.html" id="jeu">Jeux de mémoire</a>
+				</div>
+        	</div>
+		</li>
+		<li><a href="source.html"><button class="menu_not_divise">Sources</button></a></li>
+		<li><a href="about.html" float: left id="about" type="bouton">About</a></li>
+	  </ul>
+	</header> 
+
+	<div id="img_poster">
+        <a href="https://i.ytimg.com/vi/-Wel-2_mQXk/maxresdefault.jpg">
+            <img src="PV/img/info/poster.png" height="200px", width="calc(100%+10px)">
+        </a>
+    </div>
+	
+	<div id="modal-video" class="modal">
+		<div class="modal-content">
+			<div class="container">
+				<span onclick="document.getElementById('modal-video').style.display='none'" class="button display-topright">&times;</span>
+				<video controls autoplay> <!-- muted preload="auto" playsinline -->
+					<source src="PV/Deforestation.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+	</div>
+	  
+	<h1 id="titledef">Déforestation</h1>
+	<p id="text">La déforestation est un processus dans laquel les forêts sont détruites de manière permanente ou temporaires, 
+		généralement pour libérer de la terre pour l'utilisation humaine. Aujourd'hui, la déforestation est un problème majeur.
+		Ils disparaissent 13 millions d'hectares de forêt chaque année. 
+		La déforestation cause d'énormes problèmes comme la perte de terrain naturel, l'émigration et disparition de certaines espèces, 
+		changement climatique, 
+		impact économique, érosion des sols, etc. Ce site est conçu pour vous montrer les statistique de déforestation, ainsi que 
+		la disparition de certaines espèces 
+		par rapport à la disparition de forêts. Nous avons aussi préparer un jeu mémoire avec les animaux disparus ou migrés.
+	</p>
+	<h2> En aimerais-tu savoir plus sur la déforestation? Clique sur les icônes en-dessous!</h2>
+
+	<div class="icons-container">
+		<div class="icon-container">
+		  <a href="#" onclick="showInfo('consequences')" onmouseover="highlightIcon(this)" onmouseout="unhighlightIcon(this)">
+			<img src="PV/consequences.png" alt="Image cliquable" width="70">
+			<span class="icon-name">Conséquences</span>
+		  </a>
+		</div>
+		
+		<div class="icon-container">
+		  <a href="#" onclick="showInfo('causes')" onmouseover="highlightIcon(this)" onmouseout="unhighlightIcon(this)">
+			<img src="PV/causes.png" alt="Image cliquable" width="70">
+			<span class="icon-name">Causes</span>
+		  </a>
+		</div>
+		
+		<div class="icon-container">
+		  <a href="#" onclick="showInfo('help')" onmouseover="highlightIcon(this)" onmouseout="unhighlightIcon(this)">
+			<img src="PV/forest.png" alt="Image cliquable" width="70">
+			<span class="icon-name">Aide</span>
+		  </a>
+		</div>
+	  </div>
+	  
+	  
+	  
+	  
+	  <div id="consequences-info" style="display:none;">
+		<h3 class="effects">Conséquences</h3>
+		<div class=actif>
+		<p>
+			- Quatre-vingts pour cent des animaux et des plantes terrestres vivent dans 
+			les forêts, et la déforestation menace des espèces telles que l'orang-outan, 
+			le tigre de Sumatra et de nombreuses espèces d'oiseaux. 
+		</p>
+		<p>
+			- La destruction des forêts entraîne une perturbation 
+			des écosystèmes qui peut être dommageable pour les plantes et les animaux.
+		</p>
+		<p>
+			- La destruction des habitats naturels et l'expansion humaine brouillent la ligne 
+			entre les zones animales et humaines, ouvrant la porte à des maladies zoonotiques.
+		</p>
+		<p>
+			- La déforestation peut avoir un impact sur les cycles de l'eau, avec des conséquences 
+			sur l'approvisionnement en eau de certaines villes et pays voisins.
+		</p>
+		<p>
+			- La déforestation contribue également au changement climatique, en ajoutant du dioxyde de 
+			carbone dans l'air et en empêchant les arbres de l'absorber. Si la déforestation tropicale était 
+			un pays, elle serait le troisième plus gros émetteur de gaz à effet de serre après la Chine et 
+			les États-Unis.
+		</p>
+		</div>
+	  </div>
+	  
+	  <div id="causes-info" style="display:none;">
+		<h3 class="effects">Causes</h3>
+		<div class=actif>
+		<p> - L'agriculture, l'élevage, l'exploitation minière et pétrolière sont responsables 
+			de plus de la moitié de la déforestation. Les pratiques forestières, 
+			les incendies de forêt et l'urbanisation comptent pour le reste.
+		</p>
+		<p> - En Malaisie et en Indonésie, les forêts sont abattues pour produire de 
+			l'huile de palme, qui est utilisée dans de nombreux produits. En Amazonie, 
+			l'élevage de bétail et les plantations de soja sont les principales causes 
+			de la déforestation. 
+		</p>
+		<p> 
+			- Les opérations de déboisement, qui fournissent le bois et les produits 
+			papetiers du monde entier, abattent également de nombreuses arbres chaque année.
+		</p>    
+		<p> 
+			- Certains déboisements ne sont pas intentionnels, causés par des 
+			facteurs naturels tels que les incendies de forêt et la surpâturage.
+		</p>
+		</div>
+	  </div>
+	  <div id="help-info" style="display:none;">
+		<h3 class="effects">Aide</h3>
+		<div class=actif>
+		<p>
+			- Des mouvements sont en cours pour préserver les écosystèmes 
+			forestiers existants et restaurer la couverture forestière perdue par la 
+			reforestation et le rewilding.
+		</p>
+		<p>
+			- Les organisations et les activistes travaillent à lutter 
+			contre l'exploitation minière et forestière illégale.
+		</p>
+		<p>
+			- Il est important de stopper la déforestation avant qu'elle ne devienne 
+			critique pour éviter la propagation de nouvelles maladies zoonotiques.
+		</p>
+		<p>
+			- Les consommateurs peuvent rechercher des sources durables pour les 
+			produits et la viande qu'ils achètent, en privilégiant les labels tels que 
+			le Forest Stewardship Council et la Rainforest Alliance.
+		</p>
+		<p>
+			- Il existe plusieurs associations qui aident a minimiser la déforestation: 
+			Greenpeace, rainforest foundation, World Wildlife Fund (WWF), Trees for the Future, 
+			Rainsforest trust...
+		</p>
+		<p>
+			- Dans certains cantons en Suisse, il y a une loisur les propriété privée à chaque arbre coupée une autre doit être 
+			plantée.
+		</p>
+		<p>
+			- Ecosia est un moteur de recherche qui utilise les revenus 
+			publicitaires générés par les recherches pour planter des arbres 
+			dans des régions défavorisées à travers le monde. Ils ont déjà planté plus de 
+			135 millions d'arbres depuis leur création en 2009. Il existe également d'autres 
+			moteurs de recherche tels que Forestle et Lilo qui ont des programmes similaires de 
+			plantation d'arbres en échange d'une utilisation de leur moteur de recherche.
+		</p>
+		</div>
+	  </div> 
+
+	  <br><br>
+
+  </body>
+</html>
+
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+</html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>World Map</title>
+        <link rel="stylesheet" href="CSS/world.css">
+        <link rel="stylesheet" href="CSS/index.css"/>
+        <script src="JS/index.js" charset="utf-8"></script>
+        <script src="JS/about.js" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" media="all" href="CSS/modal.css"/>
+    </head>
+
+    <body>
+        <button id="scrollButton">Play</button>
+        <button id="stopButton">Stop</button>
+
+        <header class="header">
+            <ul class="navbar">
+              <li><a id="homie" href="index.html"><button class="menu_not_divise">A propos</button></a></li>
+              <li><a id="mapngraph" href="statistique.html"><button class="menu_not_divise">Statistique</button></a></li>
+              <li>
+                  <div class="dropdown">
+                      <button id="butt_vis" class="dropdown">Animaux</button>
+                      <div class="dropdown-content">
+                        <a href="infos-ani.html" id="info">Information</a>
+                        <a href="jeu.html" id="jeu">Jeux de mémoire</a>
+                      </div>
+                  </div>
+              </li>
+              <li><a href="source.html"><button class="menu_not_divise">Sources</button></a></li>
+              <li><a href="about.html" float: left id="about" type="bouton">About</a></li>
+            </ul>
+        </header> 
+
+        <br><br><br>
+        <div class="legend">
+          <div class="color-wrapper">
+            <span class="text" id="legendtitle"><strong>Area covered by Forests</strong></span>
+          </div>
+            <div class="color-wrapper">
+              <div class="color" id="top"></div>
+              <span class="text" id="toptext">10%</span>
+            </div>
+            <div class="color-wrapper">
+              <div class="color" id="middle"></div>
+              <span class="text" id="middletext">4%</span>
+            </div>
+            <div class="color-wrapper">
+              <div class="color" id="bottom"></div>
+              <span class="text" id="bottomtext">0%</span>
+            </div>
+            <div class="color-wrapper">
+              <div class="color gray"></div>
+              <span class="text">No information</span>
+            </div>
+          </div>     
+          <div id="hectare">Hectare of forests</div>
+        <div id="tooltip">
+			<p><strong>Info<span id="pays"></span> :</strong></p>
+			<p><span id="value">100</span></p>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <div>
+                    <h1 id="title"></h1>
+                </div>
+
+                <div class="svg-container" id="map">
+                </div>
+
+                <div class="slidecontainer" id="slider">
+                    <input type="range" min="1990" max="2020" value="1990" class="slider" id="myRange">
+                    <p>Year: <span id="demo"></span></p>
+                </div>    
+            </div>
+            <div class="column" id="graph">
+                <h3 id="titlegraph" class="topofgraph">Evolution of area covered by forest in hectares</h3>
+                <label for="selectcountry" class="topofgraph">Choose a country: (or click on it)</label>
+                <select id="selectcountry" class="topofgraph" onchange="Function()">
+                    <option value="all countries">all countries</option>
+                </select>
+                <div id="countrybuttons" class="topofgraph">
+                </div>
+            </div>
+            <div>
+              <p id="datasource">All data comes from the FAO <a href="https://www.fao.org/faostat/en/#data">(Food and Agricultural Organization of the United Nations)</a></p>
+            </div>
+        </div>      
+        
+        <script src="https://d3js.org/d3.v6.js"></script>
+        <script src="js/map_min.js" type="module"></script>
+
+    </body>
+
+</html>
